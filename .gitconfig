@@ -1,0 +1,13 @@
+[user]
+  name = Nao Minami
+  email = south37777@gmail.com
+[push]
+  default = current
+[color]
+  ui = auto
+[alias]
+  co = checkout
+  st = status
+  sync = !git checkout master && git pull origin master && git fetch -p origin && git branch -d $(git branch --merged | grep -v master | grep -v '*') && git push origin $(git branch -r --merged | grep origin/ | grep -v master | sed s~origin/~:~)
+[core]
+  editor = vim
