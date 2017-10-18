@@ -11,8 +11,8 @@ echo 'Update config file...'
 echo 'Updateed config file!'
 
 echo 'restart services...'
-  sudo systemctl restart nginx
+  sudo systemctl restart nginx.service
   # Save cache
-  # sudo systemctl restart mysql
+  # sudo systemctl restart mysql.service
   sudo systemctl restart isu.ruby.service
 echo 'restarted!
