@@ -2,8 +2,8 @@
 
 cp ./.emacs.el "$HOME/.emacs.el"
 cp ./.gitconfig "$HOME/.gitconfig"
-cp ./authorized_keys "$HOME/authorized_keys"
-chmod 600 "$HOME/authorized_keys"
+cp ./authorized_keys "$HOME/.ssh/authorized_keys"
+chmod 600 "$HOME/.ssh/authorized_keys"
 
 cp ./deploy.sh "$HOME/deploy.sh"
 cp ./rotate.sh "$HOME/rotate.sh"
