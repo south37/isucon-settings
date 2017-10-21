@@ -15,4 +15,4 @@ echo 'restart services...'
   # Save cache
   # sudo systemctl restart mysql.service
   sudo systemctl restart isu.ruby.service
-echo 'restarted!
+echo 'restarted!'
