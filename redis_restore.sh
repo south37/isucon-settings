@@ -8,6 +8,9 @@ if [ $# -ne 1 ]; then
   exit 1
 fi
 
+# echo password | sudo -S systemctl stop redis
+# echo password | sudo -S cp $1 /var/lib/redis/dump.rdb
+# echo password | sudo -S systemctl start redis
 sudo systemctl stop redis
 sudo cp $1 /var/lib/redis/dump.rdb
 sudo systemctl start redis
