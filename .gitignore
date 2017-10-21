@@ -9,6 +9,7 @@
 *.swp
 
 isucon-settings/*
+data/*
 
 
 # Created by https://www.gitignore.io/api/vim,ruby,linux
