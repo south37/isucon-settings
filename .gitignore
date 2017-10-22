@@ -9,6 +9,7 @@
 .bash_history
 .cache/*
 *.swp
+dump.sql
 
 isucon-settings/*
 data/*
