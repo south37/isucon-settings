@@ -5,6 +5,12 @@
 ./deploy.sh
 ```
 
+尚、`Gemfile`に何かを追加したなどで `bundle install` も行いたい場合は、`--bundle`をオプションとして渡すと`bundle install`した上でアプリケーションの再起動を行います。
+
+```
+./deploy.sh --bundle
+```
+
 ## デバッグ用のログ
 `ruby_log.sh` を実行すると、ruby のアプリケーションのログが見れます。typo などでエラーになってないかデバッグするのに役立ちます。
 
