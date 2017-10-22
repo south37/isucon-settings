@@ -10,7 +10,7 @@ echo 'Update config file...'
   # sudo cp "$HOME/my.conf" /etc/mysql/my.cnf
 echo 'Updateed config file!'
 
-if [ $1 = "--bundle" ]; then
+if [ "$1" = "--bundle" ]; then
   echo 'Start bundle install...'
   cd "$HOME/webapp/ruby"
   bundle install
