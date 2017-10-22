@@ -10,10 +10,10 @@ echo 'Update config file...'
   # sudo cp "${HOME}/my.conf" /etc/mysql/my.cnf
 echo 'Updateed config file!'
 
-echo 'restart services...'
+echo 'Restart services...'
   sudo systemctl restart nginx.service
   # sudo systemctl restart redis.service
   # Save cache
   # sudo systemctl restart mysql.service
   sudo systemctl restart isu.ruby.service
-echo 'restarted!'
+echo 'Restarted!'
