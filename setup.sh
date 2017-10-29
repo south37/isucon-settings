@@ -22,3 +22,9 @@ cp ./redis_restore.sh "$HOME/redis_restore.sh"
 
 mkdir "$HOME/log"  # Used in rotate_and_cp.sh
 mkdir "$HOME/data" # Used in redis_dump.sh and redis_restore.sh
+
+# Install netdata
+bash <(curl -Ss https://my-netdata.io/kickstart.sh) all
+sudo cp ./netdata/netdata.conf /etc/netdata/netdata.conf
+sudo cp ./netdata/apps_groups.conf /etc/netdata/apps_groups.conf
+sudo systemctl restart netdata
