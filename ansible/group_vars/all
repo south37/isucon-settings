@@ -1,3 +1,6 @@
+---
+ansible_sudo_pass: isucon
+
 # You should set host names
 # host1: 0.0.0.0
 # host2: 0.0.0.0
