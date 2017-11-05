@@ -4,7 +4,7 @@
 cp ./.emacs.el "$HOME/.emacs.el"
 cp ./.gitconfig "$HOME/.gitconfig"
 cp ./.gitignore "$HOME/.gitignore"
-cp ./authorized_keys "$HOME/.ssh/authorized_keys"
+cp ./tmpl/authorized_keys "$HOME/.ssh/authorized_keys"
 chmod 600 "$HOME/.ssh/authorized_keys"
 
 # For dev
