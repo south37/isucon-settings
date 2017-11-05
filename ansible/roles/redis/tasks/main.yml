@@ -1,0 +1,6 @@
+---
+- name: Install redis
+  apt: name=redis state=present
+
+# - name: Deploy redis
+#   command: /home/isucon/deploy_redis.sh

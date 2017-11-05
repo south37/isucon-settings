@@ -1,0 +1,3 @@
+---
+- name: Deploy nginx
+  command: /home/isucon/deploy_app.sh
