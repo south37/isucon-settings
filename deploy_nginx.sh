@@ -9,3 +9,7 @@ echo 'Update config file...'
   # sudo cp "$HOME/redis.conf" /etc/redis/redis.conf
   # sudo cp "$HOME/my.conf" /etc/mysql/my.cnf
 echo 'Updateed config file!'
+
+echo 'Restart nginx'
+  sudo systemctl restart nginx.service
+echo 'Restarted!'

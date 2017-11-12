@@ -9,7 +9,6 @@ if [ "$1" = "--bundle" ]; then
 fi
 
 echo 'Restart services...'
-  sudo systemctl restart nginx.service
   # sudo systemctl restart redis.service
   # Save cache
   # sudo systemctl restart mysql.service
