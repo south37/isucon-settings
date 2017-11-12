@@ -10,3 +10,6 @@
 ## 開発の為に必要になること
 - [ ] `sudo apt-get install vim` で vim をインストール。
 - [ ] `deploy.sh`、`log_app.sh`あたりは環境に合わせて適宜書き換える（systemd のサービス名が何なのか次第で変わるので）。その他の shell script は、他の人に使ってもらって動かなかったら修正する。`rotate_and_cp.sh` も、ユーザー名が `isucon` 以外だったら書き換える。
+
+## Redis を利用する場合
+- [ ] `redis.cnf` の中で、`bind` の設定をコメントアウト(デフォルトだとlocalhostからの接続しか受け付けなくなってる)
