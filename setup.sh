@@ -27,8 +27,4 @@ mkdir "$HOME/log"  # Used in rotate_and_cp.sh
 # For ansible
 cp -r ./ansible "$HOME/ansible"
 
-# Install netdata
-bash <(curl -Ss https://my-netdata.io/kickstart.sh) all
-sudo cp ./netdata/netdata.conf /etc/netdata/netdata.conf
-sudo cp ./netdata/apps_groups.conf /etc/netdata/apps_groups.conf
-sudo systemctl restart netdata
+./setup_netdata.sh
