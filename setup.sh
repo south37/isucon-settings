@@ -17,6 +17,9 @@ cp -rf `pwd`/scripts "$HOME"
 # Shell Script for all hosts
 cp -rf `pwd`/all_scripts "$HOME"
 
+# For lua
+cp -rf `pwd`/lua "$HOME"
+
 mkdir "$HOME/redis"
 cp ./redis/dump.sh "$HOME/redis/dump.sh"
 cp ./redis/restore.sh "$HOME/redis/restore.sh"
