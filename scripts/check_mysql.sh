@@ -1,8 +1,15 @@
 #!/bin/bash
 
-DB_USER=root
-# DB_PW=
+# DB_USER=root
+# DB_PW=root
 # DB_NAME=
+
+if [ "$DB_PW" = "" ] || [ "$DB_USER" = "" ] || [ "$DB_NAME" = "" ] ; then
+  echo "Fatal: DB_PW or DB_USER or DB_NAME is not set."
+  echo ""
+  echo "Usage: DB_USER=root DB_PW=root DB_NAME=isuketch check_mysql.sh"
+  exit 1
+fi
 
 echo "\n\n## データベース一覧"
 mysql -u$DB_USER -p$DB_PW -e "SHOW DATABASES";
