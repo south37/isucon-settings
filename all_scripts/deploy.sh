@@ -4,10 +4,17 @@
 
 TARGET="master"
 
-if [ "$#" = 1 ]; then
-  echo "deploy $1..."
-  TARGET="$1"
-fi
+for OPT in "$@"; do
+  case $OPT in
+    '--bundle' )
+        FLAG_BUNDLE=1
+        ;;
+    * )
+        TARGET=$1
+        ;;
+  esac
+  shift
+done
 
 LOAD_COMMAND="git checkout master && git pull origin master && git fetch origin ${TARGET} && git checkout ${TARGET} && git pull origin ${TARGET} && git merge master"
 
@@ -22,7 +29,12 @@ done
 echo "Deployed nginx!"
 echo ""
 
-WEB_COMMAND="hostname && ${LOAD_COMMAND} && /home/isucon/scripts/deploy_app.sh"
+if [ $FLAG_BUNDLE ]; then
+  BUNDLE_OPTION="--bundle"
+else
+  BUNDLE_OPTION=""
+fi
+WEB_COMMAND="hostname && ${LOAD_COMMAND} && /home/isucon/scripts/deploy_app.sh ${BUNDLE_OPTION}"
 echo "Deploy app..."
 echo "COMMAND: ${WEB_COMMAND}"
 for i in ${WEB_HOSTS[@]}; do
