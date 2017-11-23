@@ -12,10 +12,9 @@ cp ./tmpl/README.md "$HOME/README.md"
 cp ./kataribe.toml "$HOME/kataribe.toml"
 
 # Shell Script
-for f in $(find `pwd` -maxdepth 1 -name '*.sh'); do
-  if [ "$(basename $f)" != "setup.sh" ]; then
-    cp $f "$HOME/$(basename $f)"
-  fi
+mkdir "$HOME/scripts"
+for f in $(find `pwd`/scripts -maxdepth 1 -name '*.sh'); do
+  cp $f "$HOME/scripts/$(basename $f)"
 done
 
 mkdir "$HOME/redis"
