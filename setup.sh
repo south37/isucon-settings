@@ -12,10 +12,10 @@ cp ./tmpl/README.md "$HOME/README.md"
 cp ./kataribe.toml "$HOME/kataribe.toml"
 
 # Shell Script
-mkdir "$HOME/scripts"
-for f in $(find `pwd`/scripts -maxdepth 1 -name '*.sh'); do
-  cp $f "$HOME/scripts/$(basename $f)"
-done
+cp -rf `pwd`/scripts "$HOME"
+
+# Shell Script for all hosts
+cp -rf `pwd`/all_scripts "$HOME"
 
 mkdir "$HOME/redis"
 cp ./redis/dump.sh "$HOME/redis/dump.sh"
