@@ -32,8 +32,11 @@ for i in ${WEB_HOSTS[@]}; do
 done
 echo "Deployed app!"
 
-`pwd`/all_scripts/healthcheck.sh
+echo ""
 `pwd`/all_scripts/branch_status.sh
+echo ""
+`pwd`/all_scripts/healthcheck.sh
+echo ""
 
 echo '  ________   ________   _____ ______    ________   ___        _______   _________   _______      '
 echo ' |\   ____\ |\   __  \ |\   _ \  _   \ |\   __  \ |\  \      |\  ___ \ |\___   ___\|\  ___ \     '
