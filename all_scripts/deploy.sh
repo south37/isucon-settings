@@ -30,11 +30,11 @@ echo "Deployed nginx!"
 echo ""
 
 if [ $FLAG_BUNDLE ]; then
-  BUNDLE_OPTION="--bundle"
+  BUNDLE_OPTION=" --bundle"
 else
   BUNDLE_OPTION=""
 fi
-WEB_COMMAND="hostname && ${LOAD_COMMAND} && /home/isucon/scripts/deploy_app.sh ${BUNDLE_OPTION}"
+WEB_COMMAND="hostname && ${LOAD_COMMAND} && /home/isucon/scripts/deploy_app.sh${BUNDLE_OPTION}"
 echo "Deploy app..."
 echo "COMMAND: ${WEB_COMMAND}"
 for i in ${WEB_HOSTS[@]}; do
