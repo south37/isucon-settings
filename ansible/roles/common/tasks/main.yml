@@ -1,4 +1,0 @@
----
-- name: Fetch latest
-  command: git pull origin master
-  chdir: /home/isucon
