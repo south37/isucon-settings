@@ -26,7 +26,4 @@ cp ./redis/restore.sh "$HOME/redis/restore.sh"
 
 mkdir "$HOME/log"  # Used in rotate_and_cp.sh
 
-# For ansible
-cp -r ./ansible "$HOME/ansible"
-
 ./setup_netdata.sh
