@@ -13,3 +13,6 @@
 
 ## Redis を利用する場合
 - [ ] `redis.cnf` の中で、`bind` の設定をコメントアウト(デフォルトだとlocalhostからの接続しか受け付けなくなってる)
+
+## MySQL の connection
+- [ ] `my.cnf` の中で、`bind` の設定をコメントアウト(デフォルトだとlocalhostからの接続しか受け付けなくなってる)
