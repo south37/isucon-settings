@@ -1,40 +1,38 @@
 ## Deploy
-`deploy.sh` を実行するとunicornの再起動、nginxの再起動などを行って、branchの最新状態でアプリケーションが動くようになります。
+`./all_scripts/deploy.sh` を実行するとruby appの再起動、nginxの再起動などを行って、branchの最新状態でアプリケーションが動くようになります。
 
 ```
-./deploy.sh
+./all_scripts/deploy.sh
 ```
 
 尚、`Gemfile`に何かを追加したなどで `bundle install` も行いたい場合は、`--bundle`をオプションとして渡すと`bundle install`した上でアプリケーションの再起動を行います。
 
 ```
-./deploy.sh --bundle
+./all_scripts/deploy.sh --bundle
 ```
 
 ## デバッグ用のログ
-`log_app.sh` を実行すると、ruby のアプリケーションのログが見れます。typo などでエラーになってないかデバッグするのに役立ちます。
+`./all_scripts/log.sh` を実行すると、ruby appやnginxのログが見れます。typo などでエラーになってないかデバッグするのに役立ちます。
 
 ```
-./log_app.sh
+./all_scripts/log.sh
 ```
 
-`log_nginx.sh` を実行すると、nginx のアプリケーションのログが見れます。nginx のコンフィグファイルの設定ミスなどをデバッグするのに役立ちます。
+## branch status の確認
 
 ```
-./log_nginx.sh
+./all_scripts/branch_status.sh
 ```
 
 ## branch のデバッグフロー
 
-1. `git fetch origin [branch] && git checkout [branch]` で対象 branch へ移動
-2. `./deploy.sh` でデプロイ
-3. ブラウザで挙動を確認、`./ruby_log.sh` でエラーが出てないことを確認
+1. `./all_scripts/deploy.sh [対象branch]` でデプロイ
+2. ブラウザで挙動を確認、`./all_scripts/log.sh` でエラーが出てないことを確認
 
 ## ベンチを回す時のフロー
 
-1. `git fetch origin [branch] && git checkout [branch]` で対象 branch へ移動
-2. `./deploy.sh` でデプロイ
-3. ブラウザで挙動を確認、`./ruby_log.sh` でエラーが出てないことを確認
-4. ベンチマーク実行開始
-5. `./rotate_and_cp.sh` を実行して、logディレクトリの中に最新の access log をタイムスタンプ付きでコピー(cf. `log/20171022022023_access.log`)
-6. git add log && git commit -m 'Add log' で git commit。git push し、local に git pull でとってきたら、`cat log/20171022022023_access.log | kataribe -f kataribe.toml` で解析。
+1. `./all_scripts/deploy.sh [対象branch]` でデプロイ
+2. ブラウザで挙動を確認、`./all_scripts/log.sh` でエラーが出てないことを確認
+3. ベンチマーク実行開始
+4. `./all_scripts/kataribe_log.sh` を実行して、log file を git 管理下に置いて手元に pull してくる
+
