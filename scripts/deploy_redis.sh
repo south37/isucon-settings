@@ -1,5 +1,7 @@
 #!/bin/bash
 
+. "$(pwd)/scripts/var.txt"
+
 echo 'Update config file...'
   echo "${SUDOPASS}" | sudo -S cp "$HOME/redis.conf" /etc/redis/redis.conf
 echo 'Updateed config file!'
