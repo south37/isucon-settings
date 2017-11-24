@@ -25,7 +25,7 @@ echo "COMMAND: ${NGINX_COMMAND}"
 for i in ${NGINX_HOSTS[@]}; do
   echo ""
   echo $i
-  ssh "isucon@${i}" "${NGINX_COMMAND}"
+  ssh "${ISUCONUSER}@${i}" "${NGINX_COMMAND}"
 done
 echo "Deployed nginx!"
 echo ""
@@ -41,7 +41,7 @@ echo "COMMAND: ${WEB_COMMAND}"
 for i in ${WEB_HOSTS[@]}; do
   echo ""
   echo $i
-  ssh "isucon@${i}" "${WEB_COMMAND}"
+  ssh "${ISUCONUSER}@${i}" "${WEB_COMMAND}"
 done
 echo "Deployed app!"
 

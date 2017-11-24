@@ -27,7 +27,7 @@ if [ "${TARGETS}" == *"nginx"* ]; then
   for i in ${NGINX_HOSTS[@]}; do
     echo ""
     echo $i
-    ssh "isucon@${i}" "${NGINX_COMMAND}"
+    ssh "${ISUCONUSER}@${i}" "${NGINX_COMMAND}"
   done
 fi
 
@@ -37,6 +37,6 @@ if [ "${TARGETS}" == *"app"* ]; then
   for i in ${WEB_HOSTS[@]}; do
     echo ""
     echo $i
-    ssh "isucon@${i}" "${APP_COMMAND}"
+    ssh "${ISUCONUSER}@${i}" "${APP_COMMAND}"
   done
 fi

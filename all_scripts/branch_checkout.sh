@@ -14,6 +14,6 @@ i=1
 for host in ${HOSTS[@]}; do
   echo ""
   echo "HOST${i}: ${host}"
-  ssh "isucon@${host}" "${COMMAND}"
+  ssh "${ISUCONUSER}@${host}" "${COMMAND}"
   i=$((i+1))
 done

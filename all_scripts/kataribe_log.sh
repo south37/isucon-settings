@@ -9,7 +9,7 @@ echo "${COMMAND}"
 for i in ${NGINX_HOSTS[@]}; do
   echo ""
   echo $i
-  ssh "isucon@${i}" "${COMMAND}"
+  ssh "${ISUCONUSER}@${i}" "${COMMAND}"
 done
 
 git pull origin `git branch | grep '\*' | awk '{ print \$2 }'`

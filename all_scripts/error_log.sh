@@ -19,5 +19,5 @@ NGINX_COMMAND="hostname && echo '' && ( \$(pwd)/scripts/error_log.sh | tail -n $
 for i in ${NGINX_HOSTS[@]}; do
   echo ""
   echo $i
-  ssh "isucon@${i}" "${NGINX_COMMAND}"
+  ssh "${ISUCONUSER}@${i}" "${NGINX_COMMAND}"
 done
