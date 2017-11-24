@@ -47,8 +47,9 @@ echo "Deployed app!"
 
 echo ""
 `pwd`/all_scripts/branch_status.sh
-echo ""
-`pwd`/all_scripts/healthcheck.sh
+# TODO(south37) Start healthcheck
+# echo ""
+# `pwd`/all_scripts/healthcheck.sh
 echo ""
 
 echo '  ________   ________   _____ ______    ________   ___        _______   _________   _______      '
