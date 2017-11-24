@@ -4,16 +4,17 @@
 
 TARGET="master"
 
-for OPT in "$@"; do
-  case $OPT in
+while [ "$1" != "" ]; do
+  case "$1" in
     '--bundle' )
         FLAG_BUNDLE=1
+        shift
         ;;
     * )
-        TARGET=$1
+        TARGET="$1"
+        shift
         ;;
   esac
-  shift
 done
 
 LOAD_COMMAND="git checkout master && git pull origin master && git fetch origin ${TARGET} && git checkout ${TARGET} && git pull origin ${TARGET} && git merge master"
