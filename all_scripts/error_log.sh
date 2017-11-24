@@ -15,7 +15,7 @@ while [ "$1" != "" ]; do
   esac
 done
 
-NGINX_COMMAND="hostname && echo '' && ( /home/isucon/scripts/error_log.sh | tail -n ${TAIL_LENGTH} )"
+NGINX_COMMAND="hostname && echo '' && ( \$(pwd)/scripts/error_log.sh | tail -n ${TAIL_LENGTH} )"
 for i in ${NGINX_HOSTS[@]}; do
   echo ""
   echo $i

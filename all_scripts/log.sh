@@ -21,7 +21,7 @@ while [ "$1" != "" ]; do
   esac
 done
 
-NGINX_COMMAND="hostname && echo '' && ( /home/isucon/scripts/log_nginx.sh | tail -n ${TAIL_LENGTH} )"
+NGINX_COMMAND="hostname && echo '' && ( \$(pwd)/scripts/log_nginx.sh | tail -n ${TAIL_LENGTH} )"
 # nginx
 if [ "${TARGETS}" == *"nginx"* ]; then
   for i in ${NGINX_HOSTS[@]}; do
@@ -31,7 +31,7 @@ if [ "${TARGETS}" == *"nginx"* ]; then
   done
 fi
 
-APP_COMMAND="hostname && echo '' && ( /home/isucon/scripts/log_app.sh | tail -n ${TAIL_LENGTH} )"
+APP_COMMAND="hostname && echo '' && ( \$(pwd)/scripts/log_app.sh | tail -n ${TAIL_LENGTH} )"
 # app
 if [ "${TARGETS}" == *"app"* ]; then
   for i in ${WEB_HOSTS[@]}; do

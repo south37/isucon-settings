@@ -19,7 +19,7 @@ done
 
 LOAD_COMMAND="git checkout master && git pull origin master && git fetch origin ${TARGET} && git checkout ${TARGET} && git pull origin ${TARGET} && git merge master"
 
-NGINX_COMMAND="hostname && ${LOAD_COMMAND} && /home/isucon/scripts/deploy_nginx.sh"
+NGINX_COMMAND="hostname && ${LOAD_COMMAND} && \$(pwd)/scripts/deploy_nginx.sh"
 echo "Deploy nginx..."
 echo "COMMAND: ${NGINX_COMMAND}"
 for i in ${NGINX_HOSTS[@]}; do
@@ -35,7 +35,7 @@ if [ $FLAG_BUNDLE ]; then
 else
   BUNDLE_OPTION=""
 fi
-WEB_COMMAND="hostname && ${LOAD_COMMAND} && /home/isucon/scripts/deploy_app.sh${BUNDLE_OPTION}"
+WEB_COMMAND="hostname && ${LOAD_COMMAND} && \$(pwd)/scripts/deploy_app.sh${BUNDLE_OPTION}"
 echo "Deploy app..."
 echo "COMMAND: ${WEB_COMMAND}"
 for i in ${WEB_HOSTS[@]}; do
