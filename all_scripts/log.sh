@@ -4,14 +4,16 @@
 
 TAIL_LENGTH=10
 
-for OPT in "$@"; do
-  case $OPT in
+while [ "$1" != "" ]; do
+  case "$1" in
     '-n' )
         TAIL_LENGTH=$2
         shift 2
         ;;
+    * )
+        shift 1
+        ;;
   esac
-  shift
 done
 
 COMMAND="hostname && ( /home/isucon/scripts/log_app.sh | tail -n ${TAIL_LENGTH} )"
