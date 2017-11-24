@@ -1,5 +1,7 @@
 #!/bin/bash
 
+. "$(pwd)/scripts/var.txt"
+
 if [ "$1" = "--bundle" ]; then
   echo 'Start bundle install...'
   cd "$HOME/webapp/ruby"
@@ -9,5 +11,5 @@ if [ "$1" = "--bundle" ]; then
 fi
 
 echo 'Restart isu.ruby...'
-echo "isucon" | sudo -S systemctl restart isu.ruby.service
+echo "${SUDOPASS}" | sudo -S systemctl restart isu.ruby.service
 echo 'Restarted isu.ruby!'

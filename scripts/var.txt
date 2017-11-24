@@ -1,0 +1,2 @@
+ISUUSER=isucon
+SUDOPASS=isucon
