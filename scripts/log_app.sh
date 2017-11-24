@@ -1,3 +1,4 @@
 #!/bin/bash
 
-sudo journalctl -u isu.ruby.service
+echo "Log ruby..."
+echo "isucon" | sudo -S journalctl -u isu.ruby.service

@@ -1,3 +1,4 @@
 #!/bin/bash
 
-sudo journalctl -u nginx.service
+echo "Log nginx..."
+echo "isucon" | sudo -S journalctl -u nginx.service
