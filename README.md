@@ -17,7 +17,7 @@
 - [ ] あとで修正
   - [ ] scripts/log_app.sh
   - [ ] scripts/log_nginx.sh
-  - [ ] all_scripts/log.sh
+  - [ ] all_scripts/log.sh  
   - [ ] all_scripts/healthcheck.sh
 
 ## Redis を利用する場合
