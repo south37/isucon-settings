@@ -1,2 +1,3 @@
 ISUUSER=isucon
 SUDOPASS=isucon
+ISUSERVICE=isu.service

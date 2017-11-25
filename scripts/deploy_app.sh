@@ -10,6 +10,6 @@ if [ "$1" = "--bundle" ]; then
   echo 'bundle install finished!'
 fi
 
-echo 'Restart isu.ruby...'
-echo "${SUDOPASS}" | sudo -S systemctl restart isu.ruby.service
-echo 'Restarted isu.ruby!'
+echo "Restart ${ISUSERVICE}..."
+echo "${SUDOPASS}" | sudo -S systemctl restart "${ISUSERVICE}"
+echo "Restarted ${ISUSERVICE}!"
