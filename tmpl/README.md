@@ -5,12 +5,6 @@
 ./all_scripts/deploy.sh
 ```
 
-尚、`Gemfile`に何かを追加したなどで `bundle install` も行いたい場合は、`--bundle`をオプションとして渡すと`bundle install`した上でアプリケーションの再起動を行います。
-
-```
-./all_scripts/deploy.sh --bundle
-```
-
 ## デバッグ用のログ
 `./all_scripts/log.sh` を実行すると、go appやnginxのログが見れます。typo などでエラーになってないかデバッグするのに役立ちます。
 
