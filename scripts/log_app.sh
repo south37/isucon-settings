@@ -2,5 +2,5 @@
 
 . "$(pwd)/scripts/var.txt"
 
-echo "Log ruby..."
+echo "Log go app..."
 echo "${SUDOPASS}" | sudo -S journalctl -u "${ISUSERVICE}"

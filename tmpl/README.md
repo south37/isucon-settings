@@ -1,5 +1,5 @@
 ## Deploy
-`./all_scripts/deploy.sh` を実行するとruby appの再起動、nginxの再起動などを行って、branchの最新状態でアプリケーションが動くようになります。
+`./all_scripts/deploy.sh` を実行するとgo appの再起動、nginxの再起動などを行って、branchの最新状態でアプリケーションが動くようになります。
 
 ```
 ./all_scripts/deploy.sh
@@ -12,7 +12,7 @@
 ```
 
 ## デバッグ用のログ
-`./all_scripts/log.sh` を実行すると、ruby appやnginxのログが見れます。typo などでエラーになってないかデバッグするのに役立ちます。
+`./all_scripts/log.sh` を実行すると、go appやnginxのログが見れます。typo などでエラーになってないかデバッグするのに役立ちます。
 
 ```
 ./all_scripts/log.sh
