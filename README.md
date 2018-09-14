@@ -5,8 +5,7 @@
 - [ ] 2. nginx.conf に access log を設定して bench スタート（ https://gist.github.com/south37/d4a5a8158f49e067237c17d13ecab12a#file-04_nginx-md ）
 - [ ] 3. `git clone https://github.com/south37/isucon-settings && cd isucon-settings && ./setup.sh` を実行して諸々ファイルを設置。
 - [ ] 4. `deploy.sh` を環境に合わせて書き換える。これが終了して他の2人もdeployが出来るようになったら、repository を共有。
-- [ ] 5. unicorn の worker 数 update（多めで15くらいにしちゃう）。unicorn の env を production に変更
-- [ ] 6. nginx の静的ファイル配信など設定
+- [ ] 5. nginx の静的ファイル配信など設定
 
 ## 開発の為に必要になること
 - [ ] `sudo apt-get install vim` で vim をインストール。
